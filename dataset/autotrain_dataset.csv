@@ -1,0 +1,3085 @@
+input,target
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int val = 42; int* ptr = &val; printf(""%d"", *ptr); return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int arr[5]; arr[10] = 42; return 0; }
+Error Line: 2","Label: 1
+Bug Type: OutOfBoundsAccess
+Severity: High"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        int x = 5 / 0;
+        System.out.println(x);
+    }
+}
+Error Line: 4","Label: 1
+Bug Type: ArithmeticException
+Severity: Medium"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int arr[5]; arr[10] = 42; return 0; }
+Error Line: 2","Label: 1
+Bug Type: OutOfBoundsAccess
+Severity: High"
+"Language: python
+Code:
+undefined_variable = 42
+print(undefined_variable)
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: c
+Code:
+#include <stdlib.h>
+int main() { int* ptr = malloc(10*sizeof(int)); return 0; }
+Error Line: 2","Label: 1
+Bug Type: MemoryLeak
+Severity: Medium"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        String str = null;
+        System.out.println(str.length());
+    }
+}
+Error Line: 4","Label: 1
+Bug Type: NullPointerException
+Severity: High"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = new int[5];
+        if (10 < arr.length) System.out.println(arr[10]);
+    }
+}
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        String str = null;
+        System.out.println(str.length());
+    }
+}
+Error Line: 4","Label: 1
+Bug Type: NullPointerException
+Severity: High"
+"Language: python
+Code:
+print(undefined_variable)
+Error Line: 1","Label: 1
+Bug Type: NameError
+Severity: Low"
+"Language: python
+Code:
+values = [1, 2, 3]
+print(values[2] if len(values) > 5 else 'Invalid index')
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int* ptr = nullptr; std::cout << *ptr; return 0; }
+Error Line: 2","Label: 1
+Bug Type: NullPointerException
+Severity: High"
+"Language: python
+Code:
+values = [1, 2, 3]
+print(values[2] if len(values) > 5 else 'Invalid index')
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: python
+Code:
+undefined_variable = 42
+print(undefined_variable)
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int arr[5]; arr[10] = 42; return 0; }
+Error Line: 2","Label: 1
+Bug Type: OutOfBoundsAccess
+Severity: High"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        Object obj = ""hello"";
+        String str = (String) obj;
+    }
+}
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int val = 42; int* ptr = &val; std::cout << *ptr; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: python
+Code:
+num = int('42')
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        Object obj = ""hello"";
+        Integer num = (Integer) obj;
+    }
+}
+Error Line: 4","Label: 1
+Bug Type: ClassCastException
+Severity: High"
+"Language: c
+Code:
+#include <stdlib.h>
+int main() { int* ptr = malloc(10*sizeof(int)); free(ptr); return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        int x = 5 / 1;
+        System.out.println(x);
+    }
+}
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        String str = ""hello"";
+        System.out.println(str.length());
+    }
+}
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        Object obj = ""hello"";
+        String str = (String) obj;
+    }
+}
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int x = 5 / 1; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: c
+Code:
+#include <stdlib.h>
+int main() { int* ptr = malloc(10*sizeof(int)); return 0; }
+Error Line: 2","Label: 1
+Bug Type: MemoryLeak
+Severity: Medium"
+"Language: python
+Code:
+def divide(a, b): return a / b
+print(divide(5, 0))
+Error Line: 2","Label: 1
+Bug Type: DivisionByZero
+Severity: Medium"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int* ptr = NULL; printf(""%d"", *ptr); return 0; }
+Error Line: 2","Label: 1
+Bug Type: NullPointerException
+Severity: High"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int arr[5]; arr[10] = 42; return 0; }
+Error Line: 2","Label: 1
+Bug Type: OutOfBoundsAccess
+Severity: High"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int* ptr = nullptr; std::cout << *ptr; return 0; }
+Error Line: 2","Label: 1
+Bug Type: NullPointerException
+Severity: High"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int x = 5 / 0; return 0; }
+Error Line: 2","Label: 1
+Bug Type: DivisionByZero
+Severity: Medium"
+"Language: cpp
+Code:
+#include <iostream>
+using namespace std;
+class Test { public: ~Test() { cout << ""Destructor""; } };
+int main() { Test* t = new Test(); return 0; }
+Error Line: 5","Label: 1
+Bug Type: MemoryLeak
+Severity: Medium"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int* ptr = NULL; printf(""%d"", *ptr); return 0; }
+Error Line: 2","Label: 1
+Bug Type: NullPointerException
+Severity: High"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int arr[5]; if (10 < 5) arr[10] = 42; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: cpp
+Code:
+#include <iostream>
+using namespace std;
+class Test { public: ~Test() { cout << ""Destructor""; } };
+int main() { Test* t = new Test(); return 0; }
+Error Line: 5","Label: 1
+Bug Type: MemoryLeak
+Severity: Medium"
+"Language: python
+Code:
+def divide(a, b): return a / b
+print(divide(5, 0))
+Error Line: 2","Label: 1
+Bug Type: DivisionByZero
+Severity: Medium"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int val = 42; int* ptr = &val; printf(""%d"", *ptr); return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: python
+Code:
+num = int('string')
+Error Line: 1","Label: 1
+Bug Type: ValueError
+Severity: Medium"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int x = 5 / 0; return 0; }
+Error Line: 2","Label: 1
+Bug Type: DivisionByZero
+Severity: Medium"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = new int[5];
+        if (10 < arr.length) System.out.println(arr[10]);
+    }
+}
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int arr[5]; arr[10] = 42; return 0; }
+Error Line: 2","Label: 1
+Bug Type: OutOfBoundsAccess
+Severity: High"
+"Language: python
+Code:
+undefined_variable = 42
+print(undefined_variable)
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: c
+Code:
+#include <stdlib.h>
+int main() { int* ptr = malloc(10*sizeof(int)); free(ptr); return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int x = 5 / 1; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = new int[5];
+        System.out.println(arr[10]);
+    }
+}
+Error Line: 4","Label: 1
+Bug Type: ArrayIndexOutOfBounds
+Severity: High"
+"Language: python
+Code:
+print(undefined_variable)
+Error Line: 1","Label: 1
+Bug Type: NameError
+Severity: Low"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        int x = 5 / 1;
+        System.out.println(x);
+    }
+}
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: python
+Code:
+values = [1, 2, 3]
+print(values[5])
+Error Line: 2","Label: 1
+Bug Type: IndexError
+Severity: Medium"
+"Language: c
+Code:
+#include <stdlib.h>
+int main() { int* ptr = malloc(10*sizeof(int)); free(ptr); return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        String str = null;
+        System.out.println(str.length());
+    }
+}
+Error Line: 4","Label: 1
+Bug Type: NullPointerException
+Severity: High"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        int x = 5 / 0;
+        System.out.println(x);
+    }
+}
+Error Line: 4","Label: 1
+Bug Type: ArithmeticException
+Severity: Medium"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int arr[5]; if (10 < 5) arr[10] = 42; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        Object obj = ""hello"";
+        Integer num = (Integer) obj;
+    }
+}
+Error Line: 4","Label: 1
+Bug Type: ClassCastException
+Severity: High"
+"Language: python
+Code:
+undefined_variable = 42
+print(undefined_variable)
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        int x = 5 / 0;
+        System.out.println(x);
+    }
+}
+Error Line: 4","Label: 1
+Bug Type: ArithmeticException
+Severity: Medium"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int arr[5]; arr[10] = 42; return 0; }
+Error Line: 2","Label: 1
+Bug Type: OutOfBoundsAccess
+Severity: High"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int arr[5]; if (10 < 5) arr[10] = 42; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: python
+Code:
+values = [1, 2, 3]
+print(values[2] if len(values) > 5 else 'Invalid index')
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        String str = ""hello"";
+        System.out.println(str.length());
+    }
+}
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: python
+Code:
+num = int('string')
+Error Line: 1","Label: 1
+Bug Type: ValueError
+Severity: Medium"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = new int[5];
+        System.out.println(arr[10]);
+    }
+}
+Error Line: 4","Label: 1
+Bug Type: ArrayIndexOutOfBounds
+Severity: High"
+"Language: python
+Code:
+num = int('string')
+Error Line: 1","Label: 1
+Bug Type: ValueError
+Severity: Medium"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int* ptr = NULL; printf(""%d"", *ptr); return 0; }
+Error Line: 2","Label: 1
+Bug Type: NullPointerException
+Severity: High"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        String str = ""hello"";
+        System.out.println(str.length());
+    }
+}
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int arr[5]; if (10 < 5) arr[10] = 42; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: python
+Code:
+values = [1, 2, 3]
+print(values[5])
+Error Line: 2","Label: 1
+Bug Type: IndexError
+Severity: Medium"
+"Language: python
+Code:
+print(undefined_variable)
+Error Line: 1","Label: 1
+Bug Type: NameError
+Severity: Low"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = new int[5];
+        System.out.println(arr[10]);
+    }
+}
+Error Line: 4","Label: 1
+Bug Type: ArrayIndexOutOfBounds
+Severity: High"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = new int[5];
+        System.out.println(arr[10]);
+    }
+}
+Error Line: 4","Label: 1
+Bug Type: ArrayIndexOutOfBounds
+Severity: High"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int val = 42; int* ptr = &val; std::cout << *ptr; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int arr[5]; arr[10] = 42; return 0; }
+Error Line: 2","Label: 1
+Bug Type: OutOfBoundsAccess
+Severity: High"
+"Language: python
+Code:
+num = int('42')
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: cpp
+Code:
+#include <iostream>
+using namespace std;
+class Test { public: ~Test() { cout << ""Destructor""; } };
+int main() { Test* t = new Test(); return 0; }
+Error Line: 5","Label: 1
+Bug Type: MemoryLeak
+Severity: Medium"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int arr[5]; arr[10] = 42; return 0; }
+Error Line: 2","Label: 1
+Bug Type: OutOfBoundsAccess
+Severity: High"
+"Language: python
+Code:
+values = [1, 2, 3]
+print(values[5])
+Error Line: 2","Label: 1
+Bug Type: IndexError
+Severity: Medium"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        String str = ""hello"";
+        System.out.println(str.length());
+    }
+}
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        String str = null;
+        System.out.println(str.length());
+    }
+}
+Error Line: 4","Label: 1
+Bug Type: NullPointerException
+Severity: High"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = new int[5];
+        System.out.println(arr[10]);
+    }
+}
+Error Line: 4","Label: 1
+Bug Type: ArrayIndexOutOfBounds
+Severity: High"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int arr[5]; if (10 < 5) arr[10] = 42; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = new int[5];
+        if (10 < arr.length) System.out.println(arr[10]);
+    }
+}
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int arr[5]; if (10 < 5) arr[10] = 42; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = new int[5];
+        if (10 < arr.length) System.out.println(arr[10]);
+    }
+}
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int arr[5]; if (10 < 5) arr[10] = 42; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: python
+Code:
+undefined_variable = 42
+print(undefined_variable)
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: python
+Code:
+undefined_variable = 42
+print(undefined_variable)
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: cpp
+Code:
+#include <iostream>
+using namespace std;
+class Test { public: ~Test() { cout << ""Destructor""; } };
+int main() { Test* t = new Test(); return 0; }
+Error Line: 5","Label: 1
+Bug Type: MemoryLeak
+Severity: Medium"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        String str = null;
+        System.out.println(str.length());
+    }
+}
+Error Line: 4","Label: 1
+Bug Type: NullPointerException
+Severity: High"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        Object obj = ""hello"";
+        Integer num = (Integer) obj;
+    }
+}
+Error Line: 4","Label: 1
+Bug Type: ClassCastException
+Severity: High"
+"Language: python
+Code:
+print(undefined_variable)
+Error Line: 1","Label: 1
+Bug Type: NameError
+Severity: Low"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int arr[5]; if (10 < 5) arr[10] = 42; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: c
+Code:
+#include <stdlib.h>
+int main() { int* ptr = malloc(10*sizeof(int)); free(ptr); return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int arr[5]; arr[10] = 42; return 0; }
+Error Line: 2","Label: 1
+Bug Type: OutOfBoundsAccess
+Severity: High"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        String str = null;
+        System.out.println(str.length());
+    }
+}
+Error Line: 4","Label: 1
+Bug Type: NullPointerException
+Severity: High"
+"Language: cpp
+Code:
+#include <iostream>
+using namespace std;
+class Test { public: ~Test() { cout << ""Destructor""; } };
+int main() { Test* t = new Test(); return 0; }
+Error Line: 5","Label: 1
+Bug Type: MemoryLeak
+Severity: Medium"
+"Language: cpp
+Code:
+#include <iostream>
+using namespace std;
+class Test { public: ~Test() { cout << ""Destructor""; } };
+int main() { Test* t = new Test(); delete t; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: python
+Code:
+def divide(a, b): return a / b
+print(divide(5, 0))
+Error Line: 2","Label: 1
+Bug Type: DivisionByZero
+Severity: Medium"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int x = 5 / 0; return 0; }
+Error Line: 2","Label: 1
+Bug Type: DivisionByZero
+Severity: Medium"
+"Language: python
+Code:
+def divide(a, b): return a / b
+print(divide(5, 0))
+Error Line: 2","Label: 1
+Bug Type: DivisionByZero
+Severity: Medium"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int val = 42; int* ptr = &val; std::cout << *ptr; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        Object obj = ""hello"";
+        Integer num = (Integer) obj;
+    }
+}
+Error Line: 4","Label: 1
+Bug Type: ClassCastException
+Severity: High"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int* ptr = NULL; printf(""%d"", *ptr); return 0; }
+Error Line: 2","Label: 1
+Bug Type: NullPointerException
+Severity: High"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int arr[5]; if (10 < 5) arr[10] = 42; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: c
+Code:
+#include <stdlib.h>
+int main() { int* ptr = malloc(10*sizeof(int)); return 0; }
+Error Line: 2","Label: 1
+Bug Type: MemoryLeak
+Severity: Medium"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        String str = ""hello"";
+        System.out.println(str.length());
+    }
+}
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: cpp
+Code:
+#include <iostream>
+using namespace std;
+class Test { public: ~Test() { cout << ""Destructor""; } };
+int main() { Test* t = new Test(); delete t; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        Object obj = ""hello"";
+        Integer num = (Integer) obj;
+    }
+}
+Error Line: 4","Label: 1
+Bug Type: ClassCastException
+Severity: High"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int val = 42; int* ptr = &val; printf(""%d"", *ptr); return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int val = 42; int* ptr = &val; printf(""%d"", *ptr); return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: c
+Code:
+#include <stdlib.h>
+int main() { int* ptr = malloc(10*sizeof(int)); return 0; }
+Error Line: 2","Label: 1
+Bug Type: MemoryLeak
+Severity: Medium"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        int x = 5 / 1;
+        System.out.println(x);
+    }
+}
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: python
+Code:
+def divide(a, b): return a / b
+print(divide(5, 0))
+Error Line: 2","Label: 1
+Bug Type: DivisionByZero
+Severity: Medium"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int arr[5]; arr[10] = 42; return 0; }
+Error Line: 2","Label: 1
+Bug Type: OutOfBoundsAccess
+Severity: High"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        String str = null;
+        System.out.println(str.length());
+    }
+}
+Error Line: 4","Label: 1
+Bug Type: NullPointerException
+Severity: High"
+"Language: python
+Code:
+def divide(a, b): return a / b if b != 0 else 0
+print(divide(5, 0))
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        Object obj = ""hello"";
+        String str = (String) obj;
+    }
+}
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: python
+Code:
+def divide(a, b): return a / b if b != 0 else 0
+print(divide(5, 0))
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: python
+Code:
+def divide(a, b): return a / b if b != 0 else 0
+print(divide(5, 0))
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: cpp
+Code:
+#include <iostream>
+using namespace std;
+class Test { public: ~Test() { cout << ""Destructor""; } };
+int main() { Test* t = new Test(); return 0; }
+Error Line: 5","Label: 1
+Bug Type: MemoryLeak
+Severity: Medium"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = new int[5];
+        System.out.println(arr[10]);
+    }
+}
+Error Line: 4","Label: 1
+Bug Type: ArrayIndexOutOfBounds
+Severity: High"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int x = 5 / 1; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: c
+Code:
+#include <stdlib.h>
+int main() { int* ptr = malloc(10*sizeof(int)); return 0; }
+Error Line: 2","Label: 1
+Bug Type: MemoryLeak
+Severity: Medium"
+"Language: python
+Code:
+num = int('string')
+Error Line: 1","Label: 1
+Bug Type: ValueError
+Severity: Medium"
+"Language: python
+Code:
+values = [1, 2, 3]
+print(values[5])
+Error Line: 2","Label: 1
+Bug Type: IndexError
+Severity: Medium"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int arr[5]; if (10 < 5) arr[10] = 42; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        String str = ""hello"";
+        System.out.println(str.length());
+    }
+}
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: python
+Code:
+def divide(a, b): return a / b
+print(divide(5, 0))
+Error Line: 2","Label: 1
+Bug Type: DivisionByZero
+Severity: Medium"
+"Language: python
+Code:
+def divide(a, b): return a / b
+print(divide(5, 0))
+Error Line: 2","Label: 1
+Bug Type: DivisionByZero
+Severity: Medium"
+"Language: python
+Code:
+def divide(a, b): return a / b if b != 0 else 0
+print(divide(5, 0))
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int arr[5]; if (10 < 5) arr[10] = 42; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = new int[5];
+        if (10 < arr.length) System.out.println(arr[10]);
+    }
+}
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int arr[5]; if (10 < 5) arr[10] = 42; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int val = 42; int* ptr = &val; printf(""%d"", *ptr); return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        String str = ""hello"";
+        System.out.println(str.length());
+    }
+}
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int x = 5 / 0; return 0; }
+Error Line: 2","Label: 1
+Bug Type: DivisionByZero
+Severity: Medium"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int val = 42; int* ptr = &val; std::cout << *ptr; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = new int[5];
+        System.out.println(arr[10]);
+    }
+}
+Error Line: 4","Label: 1
+Bug Type: ArrayIndexOutOfBounds
+Severity: High"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int x = 5 / 1; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int x = 5 / 1; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        String str = ""hello"";
+        System.out.println(str.length());
+    }
+}
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int arr[5]; if (10 < 5) arr[10] = 42; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: python
+Code:
+values = [1, 2, 3]
+print(values[2] if len(values) > 5 else 'Invalid index')
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int* ptr = nullptr; std::cout << *ptr; return 0; }
+Error Line: 2","Label: 1
+Bug Type: NullPointerException
+Severity: High"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int val = 42; int* ptr = &val; std::cout << *ptr; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        int x = 5 / 1;
+        System.out.println(x);
+    }
+}
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int* ptr = nullptr; std::cout << *ptr; return 0; }
+Error Line: 2","Label: 1
+Bug Type: NullPointerException
+Severity: High"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int* ptr = NULL; printf(""%d"", *ptr); return 0; }
+Error Line: 2","Label: 1
+Bug Type: NullPointerException
+Severity: High"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        String str = null;
+        System.out.println(str.length());
+    }
+}
+Error Line: 4","Label: 1
+Bug Type: NullPointerException
+Severity: High"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int x = 5 / 0; return 0; }
+Error Line: 2","Label: 1
+Bug Type: DivisionByZero
+Severity: Medium"
+"Language: python
+Code:
+num = int('42')
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: python
+Code:
+undefined_variable = 42
+print(undefined_variable)
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        Object obj = ""hello"";
+        String str = (String) obj;
+    }
+}
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int x = 5 / 1; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int val = 42; int* ptr = &val; printf(""%d"", *ptr); return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int x = 5 / 1; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        Object obj = ""hello"";
+        String str = (String) obj;
+    }
+}
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        Object obj = ""hello"";
+        String str = (String) obj;
+    }
+}
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int arr[5]; if (10 < 5) arr[10] = 42; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: python
+Code:
+num = int('42')
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        int x = 5 / 1;
+        System.out.println(x);
+    }
+}
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: c
+Code:
+#include <stdlib.h>
+int main() { int* ptr = malloc(10*sizeof(int)); free(ptr); return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        int x = 5 / 1;
+        System.out.println(x);
+    }
+}
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: python
+Code:
+values = [1, 2, 3]
+print(values[5])
+Error Line: 2","Label: 1
+Bug Type: IndexError
+Severity: Medium"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        Object obj = ""hello"";
+        String str = (String) obj;
+    }
+}
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int x = 5 / 1; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: python
+Code:
+print(undefined_variable)
+Error Line: 1","Label: 1
+Bug Type: NameError
+Severity: Low"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int arr[5]; if (10 < 5) arr[10] = 42; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: python
+Code:
+num = int('42')
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: c
+Code:
+#include <stdlib.h>
+int main() { int* ptr = malloc(10*sizeof(int)); free(ptr); return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: python
+Code:
+num = int('string')
+Error Line: 1","Label: 1
+Bug Type: ValueError
+Severity: Medium"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int arr[5]; arr[10] = 42; return 0; }
+Error Line: 2","Label: 1
+Bug Type: OutOfBoundsAccess
+Severity: High"
+"Language: python
+Code:
+values = [1, 2, 3]
+print(values[5])
+Error Line: 2","Label: 1
+Bug Type: IndexError
+Severity: Medium"
+"Language: python
+Code:
+def divide(a, b): return a / b if b != 0 else 0
+print(divide(5, 0))
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int x = 5 / 0; return 0; }
+Error Line: 2","Label: 1
+Bug Type: DivisionByZero
+Severity: Medium"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int val = 42; int* ptr = &val; std::cout << *ptr; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: python
+Code:
+num = int('string')
+Error Line: 1","Label: 1
+Bug Type: ValueError
+Severity: Medium"
+"Language: cpp
+Code:
+#include <iostream>
+using namespace std;
+class Test { public: ~Test() { cout << ""Destructor""; } };
+int main() { Test* t = new Test(); return 0; }
+Error Line: 5","Label: 1
+Bug Type: MemoryLeak
+Severity: Medium"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int x = 5 / 0; return 0; }
+Error Line: 2","Label: 1
+Bug Type: DivisionByZero
+Severity: Medium"
+"Language: cpp
+Code:
+#include <iostream>
+using namespace std;
+class Test { public: ~Test() { cout << ""Destructor""; } };
+int main() { Test* t = new Test(); delete t; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: python
+Code:
+num = int('42')
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = new int[5];
+        System.out.println(arr[10]);
+    }
+}
+Error Line: 4","Label: 1
+Bug Type: ArrayIndexOutOfBounds
+Severity: High"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int x = 5 / 0; return 0; }
+Error Line: 2","Label: 1
+Bug Type: DivisionByZero
+Severity: Medium"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        Object obj = ""hello"";
+        Integer num = (Integer) obj;
+    }
+}
+Error Line: 4","Label: 1
+Bug Type: ClassCastException
+Severity: High"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int* ptr = nullptr; std::cout << *ptr; return 0; }
+Error Line: 2","Label: 1
+Bug Type: NullPointerException
+Severity: High"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = new int[5];
+        if (10 < arr.length) System.out.println(arr[10]);
+    }
+}
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: cpp
+Code:
+#include <iostream>
+using namespace std;
+class Test { public: ~Test() { cout << ""Destructor""; } };
+int main() { Test* t = new Test(); delete t; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: python
+Code:
+def divide(a, b): return a / b if b != 0 else 0
+print(divide(5, 0))
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int arr[5]; if (10 < 5) arr[10] = 42; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        int x = 5 / 1;
+        System.out.println(x);
+    }
+}
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: python
+Code:
+num = int('42')
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: c
+Code:
+#include <stdlib.h>
+int main() { int* ptr = malloc(10*sizeof(int)); return 0; }
+Error Line: 2","Label: 1
+Bug Type: MemoryLeak
+Severity: Medium"
+"Language: python
+Code:
+undefined_variable = 42
+print(undefined_variable)
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: python
+Code:
+def divide(a, b): return a / b
+print(divide(5, 0))
+Error Line: 2","Label: 1
+Bug Type: DivisionByZero
+Severity: Medium"
+"Language: python
+Code:
+num = int('42')
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: python
+Code:
+def divide(a, b): return a / b if b != 0 else 0
+print(divide(5, 0))
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int x = 5 / 0; return 0; }
+Error Line: 2","Label: 1
+Bug Type: DivisionByZero
+Severity: Medium"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        String str = ""hello"";
+        System.out.println(str.length());
+    }
+}
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int x = 5 / 1; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int arr[5]; arr[10] = 42; return 0; }
+Error Line: 2","Label: 1
+Bug Type: OutOfBoundsAccess
+Severity: High"
+"Language: cpp
+Code:
+#include <iostream>
+using namespace std;
+class Test { public: ~Test() { cout << ""Destructor""; } };
+int main() { Test* t = new Test(); return 0; }
+Error Line: 5","Label: 1
+Bug Type: MemoryLeak
+Severity: Medium"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = new int[5];
+        System.out.println(arr[10]);
+    }
+}
+Error Line: 4","Label: 1
+Bug Type: ArrayIndexOutOfBounds
+Severity: High"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        Object obj = ""hello"";
+        Integer num = (Integer) obj;
+    }
+}
+Error Line: 4","Label: 1
+Bug Type: ClassCastException
+Severity: High"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int* ptr = nullptr; std::cout << *ptr; return 0; }
+Error Line: 2","Label: 1
+Bug Type: NullPointerException
+Severity: High"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = new int[5];
+        if (10 < arr.length) System.out.println(arr[10]);
+    }
+}
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int* ptr = nullptr; std::cout << *ptr; return 0; }
+Error Line: 2","Label: 1
+Bug Type: NullPointerException
+Severity: High"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        Object obj = ""hello"";
+        String str = (String) obj;
+    }
+}
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int val = 42; int* ptr = &val; std::cout << *ptr; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: cpp
+Code:
+#include <iostream>
+using namespace std;
+class Test { public: ~Test() { cout << ""Destructor""; } };
+int main() { Test* t = new Test(); return 0; }
+Error Line: 5","Label: 1
+Bug Type: MemoryLeak
+Severity: Medium"
+"Language: python
+Code:
+print(undefined_variable)
+Error Line: 1","Label: 1
+Bug Type: NameError
+Severity: Low"
+"Language: c
+Code:
+#include <stdlib.h>
+int main() { int* ptr = malloc(10*sizeof(int)); return 0; }
+Error Line: 2","Label: 1
+Bug Type: MemoryLeak
+Severity: Medium"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int* ptr = nullptr; std::cout << *ptr; return 0; }
+Error Line: 2","Label: 1
+Bug Type: NullPointerException
+Severity: High"
+"Language: python
+Code:
+def divide(a, b): return a / b
+print(divide(5, 0))
+Error Line: 2","Label: 1
+Bug Type: DivisionByZero
+Severity: Medium"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int x = 5 / 0; return 0; }
+Error Line: 2","Label: 1
+Bug Type: DivisionByZero
+Severity: Medium"
+"Language: python
+Code:
+print(undefined_variable)
+Error Line: 1","Label: 1
+Bug Type: NameError
+Severity: Low"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int x = 5 / 1; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: python
+Code:
+print(undefined_variable)
+Error Line: 1","Label: 1
+Bug Type: NameError
+Severity: Low"
+"Language: python
+Code:
+def divide(a, b): return a / b
+print(divide(5, 0))
+Error Line: 2","Label: 1
+Bug Type: DivisionByZero
+Severity: Medium"
+"Language: python
+Code:
+def divide(a, b): return a / b if b != 0 else 0
+print(divide(5, 0))
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int x = 5 / 0; return 0; }
+Error Line: 2","Label: 1
+Bug Type: DivisionByZero
+Severity: Medium"
+"Language: python
+Code:
+num = int('string')
+Error Line: 1","Label: 1
+Bug Type: ValueError
+Severity: Medium"
+"Language: cpp
+Code:
+#include <iostream>
+using namespace std;
+class Test { public: ~Test() { cout << ""Destructor""; } };
+int main() { Test* t = new Test(); delete t; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int arr[5]; if (10 < 5) arr[10] = 42; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: python
+Code:
+def divide(a, b): return a / b
+print(divide(5, 0))
+Error Line: 2","Label: 1
+Bug Type: DivisionByZero
+Severity: Medium"
+"Language: c
+Code:
+#include <stdlib.h>
+int main() { int* ptr = malloc(10*sizeof(int)); return 0; }
+Error Line: 2","Label: 1
+Bug Type: MemoryLeak
+Severity: Medium"
+"Language: python
+Code:
+values = [1, 2, 3]
+print(values[5])
+Error Line: 2","Label: 1
+Bug Type: IndexError
+Severity: Medium"
+"Language: c
+Code:
+#include <stdlib.h>
+int main() { int* ptr = malloc(10*sizeof(int)); free(ptr); return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: python
+Code:
+print(undefined_variable)
+Error Line: 1","Label: 1
+Bug Type: NameError
+Severity: Low"
+"Language: python
+Code:
+def divide(a, b): return a / b if b != 0 else 0
+print(divide(5, 0))
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: python
+Code:
+values = [1, 2, 3]
+print(values[5])
+Error Line: 2","Label: 1
+Bug Type: IndexError
+Severity: Medium"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        Object obj = ""hello"";
+        Integer num = (Integer) obj;
+    }
+}
+Error Line: 4","Label: 1
+Bug Type: ClassCastException
+Severity: High"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int* ptr = nullptr; std::cout << *ptr; return 0; }
+Error Line: 2","Label: 1
+Bug Type: NullPointerException
+Severity: High"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        Object obj = ""hello"";
+        String str = (String) obj;
+    }
+}
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int arr[5]; if (10 < 5) arr[10] = 42; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: python
+Code:
+values = [1, 2, 3]
+print(values[5])
+Error Line: 2","Label: 1
+Bug Type: IndexError
+Severity: Medium"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        String str = null;
+        System.out.println(str.length());
+    }
+}
+Error Line: 4","Label: 1
+Bug Type: NullPointerException
+Severity: High"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int x = 5 / 0; return 0; }
+Error Line: 2","Label: 1
+Bug Type: DivisionByZero
+Severity: Medium"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int* ptr = NULL; printf(""%d"", *ptr); return 0; }
+Error Line: 2","Label: 1
+Bug Type: NullPointerException
+Severity: High"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int arr[5]; arr[10] = 42; return 0; }
+Error Line: 2","Label: 1
+Bug Type: OutOfBoundsAccess
+Severity: High"
+"Language: python
+Code:
+values = [1, 2, 3]
+print(values[2] if len(values) > 5 else 'Invalid index')
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: python
+Code:
+print(undefined_variable)
+Error Line: 1","Label: 1
+Bug Type: NameError
+Severity: Low"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        int x = 5 / 0;
+        System.out.println(x);
+    }
+}
+Error Line: 4","Label: 1
+Bug Type: ArithmeticException
+Severity: Medium"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int x = 5 / 0; return 0; }
+Error Line: 2","Label: 1
+Bug Type: DivisionByZero
+Severity: Medium"
+"Language: python
+Code:
+undefined_variable = 42
+print(undefined_variable)
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int arr[5]; if (10 < 5) arr[10] = 42; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: cpp
+Code:
+#include <iostream>
+using namespace std;
+class Test { public: ~Test() { cout << ""Destructor""; } };
+int main() { Test* t = new Test(); delete t; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int x = 5 / 1; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int arr[5]; arr[10] = 42; return 0; }
+Error Line: 2","Label: 1
+Bug Type: OutOfBoundsAccess
+Severity: High"
+"Language: c
+Code:
+#include <stdlib.h>
+int main() { int* ptr = malloc(10*sizeof(int)); free(ptr); return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        int x = 5 / 0;
+        System.out.println(x);
+    }
+}
+Error Line: 4","Label: 1
+Bug Type: ArithmeticException
+Severity: Medium"
+"Language: python
+Code:
+undefined_variable = 42
+print(undefined_variable)
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: python
+Code:
+values = [1, 2, 3]
+print(values[2] if len(values) > 5 else 'Invalid index')
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: python
+Code:
+def divide(a, b): return a / b if b != 0 else 0
+print(divide(5, 0))
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: python
+Code:
+values = [1, 2, 3]
+print(values[5])
+Error Line: 2","Label: 1
+Bug Type: IndexError
+Severity: Medium"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int x = 5 / 1; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int val = 42; int* ptr = &val; printf(""%d"", *ptr); return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        Object obj = ""hello"";
+        Integer num = (Integer) obj;
+    }
+}
+Error Line: 4","Label: 1
+Bug Type: ClassCastException
+Severity: High"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int x = 5 / 0; return 0; }
+Error Line: 2","Label: 1
+Bug Type: DivisionByZero
+Severity: Medium"
+"Language: c
+Code:
+#include <stdlib.h>
+int main() { int* ptr = malloc(10*sizeof(int)); free(ptr); return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int arr[5]; arr[10] = 42; return 0; }
+Error Line: 2","Label: 1
+Bug Type: OutOfBoundsAccess
+Severity: High"
+"Language: python
+Code:
+undefined_variable = 42
+print(undefined_variable)
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int x = 5 / 0; return 0; }
+Error Line: 2","Label: 1
+Bug Type: DivisionByZero
+Severity: Medium"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        Object obj = ""hello"";
+        Integer num = (Integer) obj;
+    }
+}
+Error Line: 4","Label: 1
+Bug Type: ClassCastException
+Severity: High"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int val = 42; int* ptr = &val; std::cout << *ptr; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int x = 5 / 1; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: python
+Code:
+values = [1, 2, 3]
+print(values[5])
+Error Line: 2","Label: 1
+Bug Type: IndexError
+Severity: Medium"
+"Language: python
+Code:
+values = [1, 2, 3]
+print(values[2] if len(values) > 5 else 'Invalid index')
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: cpp
+Code:
+#include <iostream>
+using namespace std;
+class Test { public: ~Test() { cout << ""Destructor""; } };
+int main() { Test* t = new Test(); delete t; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int x = 5 / 0; return 0; }
+Error Line: 2","Label: 1
+Bug Type: DivisionByZero
+Severity: Medium"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int arr[5]; if (10 < 5) arr[10] = 42; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int* ptr = NULL; printf(""%d"", *ptr); return 0; }
+Error Line: 2","Label: 1
+Bug Type: NullPointerException
+Severity: High"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int* ptr = nullptr; std::cout << *ptr; return 0; }
+Error Line: 2","Label: 1
+Bug Type: NullPointerException
+Severity: High"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        int x = 5 / 0;
+        System.out.println(x);
+    }
+}
+Error Line: 4","Label: 1
+Bug Type: ArithmeticException
+Severity: Medium"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int x = 5 / 1; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        int x = 5 / 0;
+        System.out.println(x);
+    }
+}
+Error Line: 4","Label: 1
+Bug Type: ArithmeticException
+Severity: Medium"
+"Language: python
+Code:
+num = int('42')
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: python
+Code:
+values = [1, 2, 3]
+print(values[2] if len(values) > 5 else 'Invalid index')
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = new int[5];
+        System.out.println(arr[10]);
+    }
+}
+Error Line: 4","Label: 1
+Bug Type: ArrayIndexOutOfBounds
+Severity: High"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int x = 5 / 1; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: python
+Code:
+num = int('string')
+Error Line: 1","Label: 1
+Bug Type: ValueError
+Severity: Medium"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int* ptr = nullptr; std::cout << *ptr; return 0; }
+Error Line: 2","Label: 1
+Bug Type: NullPointerException
+Severity: High"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int arr[5]; arr[10] = 42; return 0; }
+Error Line: 2","Label: 1
+Bug Type: OutOfBoundsAccess
+Severity: High"
+"Language: cpp
+Code:
+#include <iostream>
+using namespace std;
+class Test { public: ~Test() { cout << ""Destructor""; } };
+int main() { Test* t = new Test(); return 0; }
+Error Line: 5","Label: 1
+Bug Type: MemoryLeak
+Severity: Medium"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = new int[5];
+        if (10 < arr.length) System.out.println(arr[10]);
+    }
+}
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int arr[5]; arr[10] = 42; return 0; }
+Error Line: 2","Label: 1
+Bug Type: OutOfBoundsAccess
+Severity: High"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int x = 5 / 1; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int* ptr = NULL; printf(""%d"", *ptr); return 0; }
+Error Line: 2","Label: 1
+Bug Type: NullPointerException
+Severity: High"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int x = 5 / 0; return 0; }
+Error Line: 2","Label: 1
+Bug Type: DivisionByZero
+Severity: Medium"
+"Language: python
+Code:
+def divide(a, b): return a / b if b != 0 else 0
+print(divide(5, 0))
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int arr[5]; if (10 < 5) arr[10] = 42; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        String str = ""hello"";
+        System.out.println(str.length());
+    }
+}
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        String str = ""hello"";
+        System.out.println(str.length());
+    }
+}
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int val = 42; int* ptr = &val; printf(""%d"", *ptr); return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int x = 5 / 0; return 0; }
+Error Line: 2","Label: 1
+Bug Type: DivisionByZero
+Severity: Medium"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int* ptr = NULL; printf(""%d"", *ptr); return 0; }
+Error Line: 2","Label: 1
+Bug Type: NullPointerException
+Severity: High"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        int x = 5 / 0;
+        System.out.println(x);
+    }
+}
+Error Line: 4","Label: 1
+Bug Type: ArithmeticException
+Severity: Medium"
+"Language: python
+Code:
+num = int('42')
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        Object obj = ""hello"";
+        Integer num = (Integer) obj;
+    }
+}
+Error Line: 4","Label: 1
+Bug Type: ClassCastException
+Severity: High"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int x = 5 / 1; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: cpp
+Code:
+#include <iostream>
+using namespace std;
+class Test { public: ~Test() { cout << ""Destructor""; } };
+int main() { Test* t = new Test(); return 0; }
+Error Line: 5","Label: 1
+Bug Type: MemoryLeak
+Severity: Medium"
+"Language: c
+Code:
+#include <stdlib.h>
+int main() { int* ptr = malloc(10*sizeof(int)); free(ptr); return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        String str = null;
+        System.out.println(str.length());
+    }
+}
+Error Line: 4","Label: 1
+Bug Type: NullPointerException
+Severity: High"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        int x = 5 / 1;
+        System.out.println(x);
+    }
+}
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int arr[5]; arr[10] = 42; return 0; }
+Error Line: 2","Label: 1
+Bug Type: OutOfBoundsAccess
+Severity: High"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        int x = 5 / 1;
+        System.out.println(x);
+    }
+}
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: cpp
+Code:
+#include <iostream>
+using namespace std;
+class Test { public: ~Test() { cout << ""Destructor""; } };
+int main() { Test* t = new Test(); delete t; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: cpp
+Code:
+#include <iostream>
+using namespace std;
+class Test { public: ~Test() { cout << ""Destructor""; } };
+int main() { Test* t = new Test(); delete t; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: python
+Code:
+values = [1, 2, 3]
+print(values[2] if len(values) > 5 else 'Invalid index')
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int x = 5 / 0; return 0; }
+Error Line: 2","Label: 1
+Bug Type: DivisionByZero
+Severity: Medium"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        int x = 5 / 1;
+        System.out.println(x);
+    }
+}
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: python
+Code:
+print(undefined_variable)
+Error Line: 1","Label: 1
+Bug Type: NameError
+Severity: Low"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = new int[5];
+        if (10 < arr.length) System.out.println(arr[10]);
+    }
+}
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int arr[5]; arr[10] = 42; return 0; }
+Error Line: 2","Label: 1
+Bug Type: OutOfBoundsAccess
+Severity: High"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int arr[5]; arr[10] = 42; return 0; }
+Error Line: 2","Label: 1
+Bug Type: OutOfBoundsAccess
+Severity: High"
+"Language: python
+Code:
+values = [1, 2, 3]
+print(values[2] if len(values) > 5 else 'Invalid index')
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = new int[5];
+        if (10 < arr.length) System.out.println(arr[10]);
+    }
+}
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        String str = ""hello"";
+        System.out.println(str.length());
+    }
+}
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        int x = 5 / 0;
+        System.out.println(x);
+    }
+}
+Error Line: 4","Label: 1
+Bug Type: ArithmeticException
+Severity: Medium"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int x = 5 / 1; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: c
+Code:
+#include <stdlib.h>
+int main() { int* ptr = malloc(10*sizeof(int)); return 0; }
+Error Line: 2","Label: 1
+Bug Type: MemoryLeak
+Severity: Medium"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        int x = 5 / 1;
+        System.out.println(x);
+    }
+}
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: c
+Code:
+#include <stdlib.h>
+int main() { int* ptr = malloc(10*sizeof(int)); free(ptr); return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: python
+Code:
+num = int('42')
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int x = 5 / 0; return 0; }
+Error Line: 2","Label: 1
+Bug Type: DivisionByZero
+Severity: Medium"
+"Language: python
+Code:
+def divide(a, b): return a / b if b != 0 else 0
+print(divide(5, 0))
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int val = 42; int* ptr = &val; std::cout << *ptr; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int val = 42; int* ptr = &val; std::cout << *ptr; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int arr[5]; arr[10] = 42; return 0; }
+Error Line: 2","Label: 1
+Bug Type: OutOfBoundsAccess
+Severity: High"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int arr[5]; if (10 < 5) arr[10] = 42; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        Object obj = ""hello"";
+        String str = (String) obj;
+    }
+}
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: cpp
+Code:
+#include <iostream>
+using namespace std;
+class Test { public: ~Test() { cout << ""Destructor""; } };
+int main() { Test* t = new Test(); delete t; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        Object obj = ""hello"";
+        String str = (String) obj;
+    }
+}
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int x = 5 / 1; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = new int[5];
+        System.out.println(arr[10]);
+    }
+}
+Error Line: 4","Label: 1
+Bug Type: ArrayIndexOutOfBounds
+Severity: High"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        int x = 5 / 0;
+        System.out.println(x);
+    }
+}
+Error Line: 4","Label: 1
+Bug Type: ArithmeticException
+Severity: Medium"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        Object obj = ""hello"";
+        Integer num = (Integer) obj;
+    }
+}
+Error Line: 4","Label: 1
+Bug Type: ClassCastException
+Severity: High"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        int x = 5 / 1;
+        System.out.println(x);
+    }
+}
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: python
+Code:
+values = [1, 2, 3]
+print(values[5])
+Error Line: 2","Label: 1
+Bug Type: IndexError
+Severity: Medium"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int x = 5 / 1; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int x = 5 / 1; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int val = 42; int* ptr = &val; printf(""%d"", *ptr); return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int x = 5 / 1; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int* ptr = NULL; printf(""%d"", *ptr); return 0; }
+Error Line: 2","Label: 1
+Bug Type: NullPointerException
+Severity: High"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int* ptr = NULL; printf(""%d"", *ptr); return 0; }
+Error Line: 2","Label: 1
+Bug Type: NullPointerException
+Severity: High"
+"Language: python
+Code:
+values = [1, 2, 3]
+print(values[2] if len(values) > 5 else 'Invalid index')
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: python
+Code:
+num = int('string')
+Error Line: 1","Label: 1
+Bug Type: ValueError
+Severity: Medium"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = new int[5];
+        if (10 < arr.length) System.out.println(arr[10]);
+    }
+}
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int x = 5 / 1; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int arr[5]; arr[10] = 42; return 0; }
+Error Line: 2","Label: 1
+Bug Type: OutOfBoundsAccess
+Severity: High"
+"Language: python
+Code:
+undefined_variable = 42
+print(undefined_variable)
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int x = 5 / 0; return 0; }
+Error Line: 2","Label: 1
+Bug Type: DivisionByZero
+Severity: Medium"
+"Language: python
+Code:
+num = int('string')
+Error Line: 1","Label: 1
+Bug Type: ValueError
+Severity: Medium"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int val = 42; int* ptr = &val; printf(""%d"", *ptr); return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int val = 42; int* ptr = &val; printf(""%d"", *ptr); return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int arr[5]; arr[10] = 42; return 0; }
+Error Line: 2","Label: 1
+Bug Type: OutOfBoundsAccess
+Severity: High"
+"Language: python
+Code:
+num = int('42')
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: python
+Code:
+num = int('string')
+Error Line: 1","Label: 1
+Bug Type: ValueError
+Severity: Medium"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int val = 42; int* ptr = &val; std::cout << *ptr; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: python
+Code:
+num = int('string')
+Error Line: 1","Label: 1
+Bug Type: ValueError
+Severity: Medium"
+"Language: c
+Code:
+#include <stdlib.h>
+int main() { int* ptr = malloc(10*sizeof(int)); free(ptr); return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = new int[5];
+        System.out.println(arr[10]);
+    }
+}
+Error Line: 4","Label: 1
+Bug Type: ArrayIndexOutOfBounds
+Severity: High"
+"Language: c
+Code:
+#include <stdlib.h>
+int main() { int* ptr = malloc(10*sizeof(int)); return 0; }
+Error Line: 2","Label: 1
+Bug Type: MemoryLeak
+Severity: Medium"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int val = 42; int* ptr = &val; std::cout << *ptr; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int arr[5]; if (10 < 5) arr[10] = 42; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int arr[5]; arr[10] = 42; return 0; }
+Error Line: 2","Label: 1
+Bug Type: OutOfBoundsAccess
+Severity: High"
+"Language: cpp
+Code:
+#include <iostream>
+using namespace std;
+class Test { public: ~Test() { cout << ""Destructor""; } };
+int main() { Test* t = new Test(); return 0; }
+Error Line: 5","Label: 1
+Bug Type: MemoryLeak
+Severity: Medium"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int arr[5]; if (10 < 5) arr[10] = 42; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: cpp
+Code:
+#include <iostream>
+using namespace std;
+class Test { public: ~Test() { cout << ""Destructor""; } };
+int main() { Test* t = new Test(); delete t; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        Object obj = ""hello"";
+        String str = (String) obj;
+    }
+}
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int x = 5 / 0; return 0; }
+Error Line: 2","Label: 1
+Bug Type: DivisionByZero
+Severity: Medium"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int* ptr = nullptr; std::cout << *ptr; return 0; }
+Error Line: 2","Label: 1
+Bug Type: NullPointerException
+Severity: High"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        String str = null;
+        System.out.println(str.length());
+    }
+}
+Error Line: 4","Label: 1
+Bug Type: NullPointerException
+Severity: High"
+"Language: python
+Code:
+def divide(a, b): return a / b
+print(divide(5, 0))
+Error Line: 2","Label: 1
+Bug Type: DivisionByZero
+Severity: Medium"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = new int[5];
+        if (10 < arr.length) System.out.println(arr[10]);
+    }
+}
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int val = 42; int* ptr = &val; printf(""%d"", *ptr); return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: c
+Code:
+#include <stdlib.h>
+int main() { int* ptr = malloc(10*sizeof(int)); return 0; }
+Error Line: 2","Label: 1
+Bug Type: MemoryLeak
+Severity: Medium"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        int x = 5 / 0;
+        System.out.println(x);
+    }
+}
+Error Line: 4","Label: 1
+Bug Type: ArithmeticException
+Severity: Medium"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int x = 5 / 0; return 0; }
+Error Line: 2","Label: 1
+Bug Type: DivisionByZero
+Severity: Medium"
+"Language: c
+Code:
+#include <stdio.h>
+int main() { int* ptr = NULL; printf(""%d"", *ptr); return 0; }
+Error Line: 2","Label: 1
+Bug Type: NullPointerException
+Severity: High"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        int x = 5 / 0;
+        System.out.println(x);
+    }
+}
+Error Line: 4","Label: 1
+Bug Type: ArithmeticException
+Severity: Medium"
+"Language: python
+Code:
+print(undefined_variable)
+Error Line: 1","Label: 1
+Bug Type: NameError
+Severity: Low"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int x = 5 / 1; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: cpp
+Code:
+#include <iostream>
+int main() { int x = 5 / 0; return 0; }
+Error Line: 2","Label: 1
+Bug Type: DivisionByZero
+Severity: Medium"
+"Language: cpp
+Code:
+#include <iostream>
+using namespace std;
+class Test { public: ~Test() { cout << ""Destructor""; } };
+int main() { Test* t = new Test(); delete t; return 0; }
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: java
+Code:
+public class Main {
+    public static void main(String[] args) {
+        String str = null;
+        System.out.println(str.length());
+    }
+}
+Error Line: 4","Label: 1
+Bug Type: NullPointerException
+Severity: High"
+"Language: python
+Code:
+values = [1, 2, 3]
+print(values[2] if len(values) > 5 else 'Invalid index')
+Error Line: -1","Label: 0
+Bug Type: None
+Severity: None"
+"Language: c
+Code:
+#include <stdlib.h>
+int main() { int* ptr = malloc(10*sizeof(int)); return 0; }
+Error Line: 2","Label: 1
+Bug Type: MemoryLeak
+Severity: Medium"
